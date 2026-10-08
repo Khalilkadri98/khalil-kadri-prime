@@ -14,3 +14,4 @@
 - Store bilingual copy in a shared typed content module and render reusable portfolio and project components so German and English remain consistent.
 - Keep verified CV PDFs in public/documents and choose the download by the selected language so downloads remain self-contained.
 - Label designed project interfaces as concepts and illustrative data as samples so visuals cannot imply verified screenshots or project results.
+- Render the hero portrait through a dedicated optional-image component with a fixed aspect ratio and object-fit cropping so adding a real asset preserves layout and avoids distortion.
