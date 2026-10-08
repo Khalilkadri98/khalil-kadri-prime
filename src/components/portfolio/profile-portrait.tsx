@@ -1,7 +1,8 @@
 import { UserRound } from 'lucide-react'
 import type { Language } from '@/lib/portfolio/content'
+import portraitAsset from '@/assets/khalil-kadri-portrait.jpg.asset.json'
 
-export function ProfilePortrait({ language, src }: { language: Language; src?: string }) {
+export function ProfilePortrait({ language, src = portraitAsset.url }: { language: Language; src?: string }) {
   const de = language === 'de'
   return <figure className="profile-portrait">
     <div className="portrait-frame">
