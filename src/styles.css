@@ -61,27 +61,17 @@ a { text-decoration: none; }
 .hero-ctas .cta { height: 44px; padding-inline: 20px; font-size: 12px; }
 .status { display: flex; align-items: center; gap: 8px; font-size: 10px; color: var(--muted-foreground); margin-top: 23px; }
 .status-dot { width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%; background: var(--success); box-shadow: 0 0 0 3px color-mix(in oklab, var(--success) 10%, transparent); }
-.technical-visual { position: relative; height: 380px; background-image: radial-gradient(var(--border) .8px, transparent .8px); background-size: 17px 17px; display: flex; align-items: center; justify-content: center; }
-.architecture { width: 346px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow-visual); transform: rotate(-2deg); }
-.architecture-top { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); padding: 13px 18px; font-size: 9px; color: var(--muted-foreground); font-family: var(--font-mono); }
-.window-dots { display: flex; gap: 4px; }
-.window-dots i { width: 5px; height: 5px; background: var(--border); border-radius: 50%; }
-.architecture-body { padding: 25px; }
-.architecture-title { display: flex; align-items: center; gap: 13px; }
-.architecture-icon { display: grid; place-items: center; width: 43px; height: 43px; border: 1px solid var(--border); border-radius: 6px; color: var(--primary); background: var(--accent); }
-.architecture-title strong { font-size: 14px; display: block; }
-.architecture-title small { display: block; font-family: var(--font-mono); font-size: 9px; color: var(--muted-foreground); margin-top: 5px; }
-.connector { height: 25px; border-left: 1px dashed var(--border); margin-left: 21px; }
-.architecture-layer { display: flex; align-items: center; gap: 11px; padding: 12px 13px; border: 1px solid var(--border); border-radius: 5px; margin-bottom: 8px; }
-.architecture-layer svg { width: 16px; color: var(--muted-foreground); }
-.architecture-layer strong { font-size: 10px; display: block; }
-.architecture-layer small { font-size: 8px; color: var(--muted-foreground); display: block; margin-top: 4px; }
-.layer-state { margin-left: auto; color: var(--success); }
-.architecture-bottom { margin-top: 19px; display: flex; justify-content: space-between; color: var(--muted-foreground); font: 8px var(--font-mono); }
-.floating-label { position: absolute; background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow-card); border-radius: 5px; padding: 10px 13px; display: flex; align-items: center; gap: 8px; font: 9px var(--font-mono); }
-.floating-label svg { width: 13px; color: var(--primary); }
-.float-top { right: -5px; top: 33px; transform: rotate(3deg); }
-.float-bottom { bottom: 30px; left: 3px; transform: rotate(2deg); }
+.profile-portrait { width: min(100%, 350px); margin: 0; justify-self: center; min-width: 0; }
+.portrait-frame { aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--secondary); box-shadow: var(--shadow-visual); }
+.portrait-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+.portrait-placeholder { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; text-align: center; color: var(--muted-foreground); }
+.portrait-placeholder svg { width: 64px; height: 64px; stroke-width: 1; margin-bottom: 10px; }
+.portrait-placeholder span { color: var(--foreground); font-size: 14px; font-weight: 650; }
+.portrait-placeholder small { font-size: 11px; line-height: 1.7; }
+.profile-portrait figcaption { display: flex; flex-direction: column; gap: 5px; margin-top: 16px; }
+.profile-portrait figcaption strong { font-size: 13px; font-weight: 650; }
+.profile-portrait figcaption span { font-size: 10px; line-height: 1.7; color: var(--muted-foreground); }
+@media (max-width: 600px) { .profile-portrait { width: min(100%, 280px); margin-top: 22px; margin-bottom: 12px; } }
 .tech-strip { border-block: 1px solid var(--border); padding: 23px 0; }
 .tech-strip-inner { display: flex; gap: 32px; align-items: center; justify-content: space-between; }
 .tech-intro { font: 9px var(--font-mono); color: var(--muted-foreground); text-transform: uppercase; line-height: 1.7; max-width: 105px; }
@@ -197,8 +187,8 @@ a { text-decoration: none; }
 .detail-copy h4 { color: var(--foreground); font-size: 13px; margin: 20px 0 6px; }
 .mobile-menu-links { display: flex; flex-direction: column; gap: 25px; padding-top: 35px; font-size: 18px; }
 @keyframes enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-.hero-copy-area, .technical-visual { animation: enter .6s ease both; }
-.technical-visual { animation-delay: .1s; }
+.hero-copy-area, .profile-portrait { animation: enter .6s ease both; }
+.profile-portrait { animation-delay: .1s; }
 @media (min-width: 1440px) { .hero { padding-top: 95px; padding-bottom: 80px; } }
 @media (max-width: 1100px) { .page-width { width: calc(100% - 64px); } .desktop-nav { gap: 17px; } .header-actions { gap: 12px; } .hero-grid { gap: 32px; } .hero h1 { font-size: 52px; } .tech-strip-inner { gap: 17px; } .tech-item { font-size: 12px; } .about-grid, .experience-grid { gap: 45px; } .float-top { right: -8px; } }
 @media (max-width: 850px) { .desktop-nav { display: none; } .menu-toggle { display: inline-flex; } .hero-grid { grid-template-columns: 1.15fr 1fr; gap: 10px; } .architecture { width: 285px; } .architecture-body { padding: 19px; } .float-top { right: -5px; } .tech-intro { display: none; } .tech-strip-inner { flex-wrap: wrap; justify-content: center; gap: 20px 28px; } .hero h1 { font-size: 45px; } .hero-role { font-size: 13px; } .hero-copy { font-size: 12px; } .hero-ctas { flex-direction: column; align-items: flex-start; } .hero { padding-top: 55px; } .hero-ctas .cta { min-width: 185px; } .project-visual { padding-inline: 18px; } .project-body { padding: 22px; } .case-facts { grid-template-columns: 1fr; gap: 12px; } .values-grid { grid-template-columns: repeat(2,1fr); gap: 30px; } .contact-grid { gap: 35px; } }
