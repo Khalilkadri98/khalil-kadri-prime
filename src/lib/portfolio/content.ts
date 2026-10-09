@@ -11,6 +11,7 @@ export const navigation = [
   { id: 'about', label: text('Über mich', 'About') },
   { id: 'experience', label: text('Erfahrung', 'Experience') },
   { id: 'projects', label: text('Projekte', 'Projects') },
+  { id: 'testimonials', label: text('Kundenstimmen', 'Testimonials') },
   { id: 'skills', label: text('Skills', 'Skills') },
   { id: 'contact', label: text('Kontakt', 'Contact') },
 ]
@@ -70,4 +71,50 @@ export const values = [
   { title: text('Ursachen statt Symptome', 'Root causes, not symptoms'), body: text('Strukturierte Analyse und nachvollziehbare Lösungen statt kurzfristiger Workarounds.', 'Structured analysis and traceable solutions, rather than short-term workarounds.') },
   { title: text('Enterprise-Verständnis', 'Enterprise understanding'), body: text('Verlässlichkeit, SLAs und Dokumentation sind Teil meiner Arbeitsweise.', 'Reliability, SLAs and documentation are built into the way I work.') },
   { title: text('Klare Kommunikation', 'Clear communication'), body: text('Technische Zusammenhänge verständlich machen – für Teams, Kunden und Fachbereiche.', 'Making technical topics clear for teams, customers and business stakeholders.') },
+]
+export type ClientTestimonial = {
+  id: string
+  rating: 5
+  title: string
+  dateRange: string
+  quote: string
+  skills: string[]
+}
+export const testimonialCopy = {
+  label: text('Freelance & Kundenstimmen', 'Freelance & client testimonials'),
+  title: text('Zusammenarbeit, die Vertrauen schafft.', 'Collaboration that builds trust.'),
+  introduction: text('Als Freelancer unterstütze ich Kunden bei WordPress-Websites, Landingpages und der Weiterentwicklung bestehender Webanwendungen. Diese Kundenstimmen geben einen Einblick in die Zusammenarbeit.', 'As a freelancer, I help clients with WordPress websites, landing pages and the further development of existing web applications. These client reviews offer an insight into working together.'),
+  endorsedSkills: text('Vom Kunden bestätigte Stärken', 'Client-endorsed skills'),
+  rating: text('5 von 5 Sternen', '5 out of 5 stars'),
+  cta: text('Ihr Webprojekt besprechen', 'Discuss your web project'),
+}
+export const testimonials: ClientTestimonial[] = [
+  {
+    id: 'landing-page', rating: 5,
+    title: 'New Landing Page / social media posts (pics and text)',
+    dateRange: 'Jun 21, 2026 – Jul 25, 2026',
+    quote: "I recommend Khalil - he's fast, reliable, accountable and committed to quality. He is very professional and efficient and completed the project faster than the set time limits.",
+    skills: ['Landing Page', 'Landing Page Design', 'WordPress Landing Page', 'Reliable', 'German', 'Landing Page Optimization'],
+  },
+  {
+    id: 'ona-wordpress', rating: 5,
+    title: 'WordPress Website Development with Ona Architecture Theme',
+    dateRange: 'Mar 13, 2026 – Apr 23, 2026',
+    quote: 'Great help. Great and fast communication.',
+    skills: ['Committed to Quality', 'Solution Oriented', 'Clear Communicator'],
+  },
+  {
+    id: 'coachingpress', rating: 5,
+    title: 'Wordpress help with CoachingPress plugin set up',
+    dateRange: 'May 28, 2025 – Jul 5, 2025',
+    quote: 'Amazing and professional. Definitely will work with Khalil again.',
+    skills: ['Professional', 'Collaborative'],
+  },
+  {
+    id: 'purchasing-project', rating: 5,
+    title: 'Further development an an existing purchasing project',
+    dateRange: 'Dec 17, 2023 – Jan 15, 2024',
+    quote: 'All our needs have been solved in perfect manner. A really great job was made by Khalil.',
+    skills: ['Solution Oriented', 'Committed to Quality'],
+  },
 ]
