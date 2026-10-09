@@ -4,5 +4,5 @@
 - [x] Verify desktop/mobile, language switch, navigation and project details; complete page metadata.
 - [x] Update both language levels to C1 and verify all portfolio/CV language references.
 - [x] Prepare and verify a responsive portrait placeholder for the user's future photo.
-- [ ] Add four original freelance testimonials to the homepage with bilingual labels, navigation and contact CTA.
-- [ ] Verify testimonials, language switching and navigation on desktop and mobile.
+- [x] Add four original freelance testimonials to the homepage with bilingual labels, navigation and contact CTA.
+- [x] Verify testimonials, language switching and navigation on desktop and mobile.
